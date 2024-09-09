@@ -115,7 +115,7 @@ a {
         
     }
 
-/* Fixing layout for the submit button */
+
 .btn-submit {
     width: 100%;
     padding: 10px;
@@ -136,3 +136,13 @@ a {
         display: inline-block;
         padding: 10px 20px;
     }
+
+.welcome-container {
+    color: #ff8906; 
+    font-size: 36px; 
+    font-weight: bold; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
