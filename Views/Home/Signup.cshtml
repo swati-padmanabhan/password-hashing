@@ -1,0 +1,49 @@
+﻿@model PasswordHashingDemo.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="~/Content/style.css" />
+</head>
+<body>
+    <div class="form-horizontal">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <h4>Signup</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Username" } })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                @*@Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })*@
+
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Enter Password" })
+
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group button-container">
+                <input type="submit" value="Signup" class="btn-submit" />
+            </div>
+        }
+
+        <div class="link">
+            @Html.ActionLink("Back to Home Page", "Index", new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</body>
+</html>

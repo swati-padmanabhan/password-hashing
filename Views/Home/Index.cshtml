@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Application</h1>
+        <div class="button-container">
+            <!-- Button for Login -->
+            <a href="@Url.Action("Login", "Home")" class="btn btn-primary">Login</a>
+
+            <!-- Button for Sign Up -->
+            <a href="@Url.Action("SignUp", "Home")" class="btn btn-secondary">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
